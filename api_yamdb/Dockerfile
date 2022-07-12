@@ -1,13 +1,15 @@
 FROM python:3.7-slim
+LABEL owner="michael.soldatkin@gmail.com"
 
+# Создать и сделать директорию /app рабочей директорией
 WORKDIR /app
 
-COPY requirements.txt .
+# Копируем  /api_yamdb в рабочую директорию образа
+COPY .. /app
 
-RUN python3 -m pip install --upgrade pip
+# Выполнить установку зависимостей внутри контейнера
+RUN python -m pip install --upgrade pip
+RUN pip3 install -r /app/requirements.txt --no-cache-dir
 
-RUN pip3 install -r requirements.txt --no-cache-dir
-
-COPY . .
-
-CMD ["gunicorn", "api_yamdb.wsgi:application", "--bind", "0:8000" ]
+# Выполнить запуск сервера разработки при старте контейнера
+CMD ["gunicorn", "api_yamdb.wsgi:application", "--bind", "0:8000"]
