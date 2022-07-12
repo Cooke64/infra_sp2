@@ -65,7 +65,7 @@ DATABASES = {
         'PASSWORD': 'postgres',
         'HOST': 'db',
         'PORT': 5432,
-        #Тесты проходят только в таком виде почему-то и не видят env файлы
+        # Тесты проходят только в таком виде почему-то и не видят env файлы
         # 'ENGINE': os.environ.get('DB_ENGINE'),
         # 'NAME': os.environ.get('DB_NAME'),
         # 'USER': os.environ.get('POSTGRES_USER'),
