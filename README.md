@@ -42,14 +42,14 @@
 - docker-compose down
 
 **1.post Добавление новой категории  localhost/api/v1/categories/:**
-:white_check_mark: #### Права доступа: Администратор.
+- :white_check_mark:Права доступа: Администратор.
 ```
 {
     "name": "string",
     "slug": "string"
 }
 ```
-:white_check_mark: #### Пример успешного ответа:
+- :white_check_mark:  Пример успешного ответа:
 ```
 {
     "name": "string",
@@ -57,7 +57,7 @@
 }
 ```
 **2.get Получение списка всех жанров  localhost/api/v1/genre/:**
-:white_check_mark: #### Права доступа: Доступно без токена. Пример успешного ответа:
+- :white_check_mark: Права доступа: Доступно без токена. Пример успешного ответа:
 ```
 [
     {
@@ -69,14 +69,14 @@
 ]
 ```
 **3. post Регистрация нового пользователя эндоинт localhost/api/v1/auth/signup/:**
-:white_check_mark: #### Права доступа: Доступно без токена.
+- :white_check_mark:  Права доступа: Доступно без токена.
 ```
 {
     "email": "string",
     "username": "string"
 }
 ```
-:white_check_mark: #### Пример успешного ответа:
+- :white_check_mark:  Пример успешного ответа:
 ```
 {
     "email": "string",
