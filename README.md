@@ -40,5 +40,30 @@
 - docker-compose exec web python manage.py collectstatic --no-input
 ##При завершении работы выполнить команду для удаления контейнеров 
 - docker-compose down
+
+1.post Добавление новой категории эндпоинт api/v1/categories/:
+Права доступа: Администратор.
+
+{
+    "name": "string",
+    "slug": "string"
+}
+Пример успешного ответа:
+
+{
+    "name": "string",
+    "slug": "string"
+}
+2.get Получение списка всех жанров эндпоинт api/v1/genre/:
+Права доступа: Доступно без токена. Пример успешного ответа:
+
+[
+    {
+        "count": 0,
+        "next": "string",
+        "previous": "string",
+        "results": []
+    }
+]
 ## Документация представлена [здесь]
 ```http://127.0.0.1:8000/redoc/```
